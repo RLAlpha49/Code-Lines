@@ -91,11 +91,16 @@ files using the `--include-extensions` or `--exclude-extensions` arguments respe
 
 Here are some examples of how to use the script:
 
-1. Count the lines in all files in a directory, excluding any files in the venv directory and any files with a .txt
+1. Count the lines in all files in a directory:
+    <pre>python main.py /path/to/directory</pre>
+    <pre>line-counter /path/to/directory</pre>
+2. Count the lines in all files in a directory, excluding any files in the venv directory and any files with a .txt
    extension:
     <pre>python main.py /path/to/directory --exclude venv --exclude-extensions .txt </pre>
-2. Count the lines in all Python files in a directory, including only files in the src directory:
+    <pre>line-counter /path/to/directory -e venv -ex .txt</pre>
+3. Count the lines in all Python files in a directory, including only files in the src directory:
     <pre>python main.py /path/to/directory --include src --include-extensions .py </pre>
+    <pre>line-counter /path/to/directory -i src -ix .py</pre>
 
 The script will then print the line counts for each file extension, sorted by the number of lines, and the total line
 count.
