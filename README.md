@@ -16,7 +16,7 @@ python main.py
 ## Making the Script Executable
 
 The script can always be run by calling `python /path/to/main.py`, but you can make it executable so that you can run it
-by typing `line-counter` or `line-counter.bat` into your terminal. Here's how you can do it:
+by typing `line-counter` or `line-counter.bat` into the terminal. Here's how you can do it:
 
 ### Unix-like Systems (Linux, macOS)
 
@@ -27,21 +27,21 @@ by typing `line-counter` or `line-counter.bat` into your terminal. Here's how yo
     chmod +x main.py
     ```
 
-2. Rename your script to line-counter (without the .py extension). You can do this with the following command:
+2. Rename the script to line-counter (without the .py extension). You can do this with the following command:
 
     ```bash
     mv main.py line-counter
     ```
 
-3. Move your script to a directory that's on your system's PATH. The PATH is a list of directories that your system
-   searches through when looking for executables. You can move your script to /usr/local/bin, which is a common place to
+3. Move the script to a directory that's on the system's PATH. The PATH is a list of directories that the system
+   searches through when looking for executables. You can move the script to /usr/local/bin, which is a common place to
    put custom scripts:
 
     ```bash
     sudo mv line-counter /usr/local/bin
     ```
 
-Now, you should be able to run your script from anywhere by typing line-counter into your terminal.
+Now, you should be able to run the script from anywhere by typing line-counter into the terminal.
 
 ### Windows
 
@@ -52,7 +52,7 @@ Now, you should be able to run your script from anywhere by typing line-counter 
     - Under 'System Variables', find the 'Path' variable, select it, and click on 'Edit'.
     - In the 'Variable value' field, append the full path to the directory containing the batch file.
 
-Now, you should be able to run your script from anywhere by typing line-counter.bat into your command prompt, followed
+Now, you should be able to run the script from anywhere by typing line-counter.bat into the command prompt, followed
 by any arguments the script accepts.
 
 To make the script executable as line-counter instead of line-counter.bat, you can create an alias in Windows:
@@ -92,9 +92,10 @@ files using the `--include-extensions` or `--exclude-extensions` arguments respe
 Here are some examples of how to use the script:
 
 1. Count the lines in all files in a directory, excluding any files in the venv directory and any files with a .txt
-   extension: <pre>bash python main.py /path/to/directory --exclude venv --exclude-extensions .txt </pre>
-2. Count the lines in all Python files in a directory, including only files in the src directory:  <pre>python main.py
-   /path/to/directory --include src --include-extensions .py </pre>
+   extension:
+    <pre>python main.py /path/to/directory --exclude venv --exclude-extensions .txt </pre>
+2. Count the lines in all Python files in a directory, including only files in the src directory:
+    <pre>python main.py /path/to/directory --include src --include-extensions .py </pre>
 
 The script will then print the line counts for each file extension, sorted by the number of lines, and the total line
 count.
